@@ -1,0 +1,35 @@
+{% extends "index.html" %}
+
+{% block content1 %}
+<link rel="stylesheet" type="text/css" href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'>
+<link rel="stylesheet" type="text/css" href='{{ url_for("static", filename="css/style7.css") }}'>
+{% endblock %}
+{% block content2 %}
+<form id="top">
+             <form id="top2">
+                 <input id="LK" value="Назад" type="button" onclick="location.href='{{ url_for('main') }}'" />
+                 <input id="LK2" value="ЛК" type="button" onclick="location.href='{{ url_for('profile') }}'" />
+             </form>
+</form>
+<br>
+<br>
+<center><span id="title">Прогноз Погоды</span></center>
+    <center>
+        <form id="weather" action="" method="post" novalidate>
+        {{form.hidden_tag() }}
+        <span class="text">Введите интересующий вас город</span><br>
+        {{form.sity}} {{ form.submit() }}
+        </form>
+        {% if error == 'false' %}
+        <center><div class="alert alert-danger" role="alert" align="center">
+        Данный город не найден!
+         {% endif %}
+         {% if error == 'empty' %}
+        <center><div class="alert alert-danger" role="alert" align="center">
+        Введите название города!
+         {% endif %}
+    </center>
+<br>
+<center ><img id="MainPicture" src='{{ url_for("static", filename="weather.png") }}' alt="Монитор"></center>
+
+{% endblock %}

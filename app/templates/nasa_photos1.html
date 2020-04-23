@@ -1,0 +1,49 @@
+{% extends "index.html" %}
+
+{% block content1 %}
+<link rel="stylesheet" type="text/css" href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'>
+<link rel="stylesheet" type="text/css" href='{{ url_for("static", filename="css/style5.css") }}'>
+{% endblock %}
+{% block content2 %}
+<form id="top">
+             <form id="top2">
+                 <input id="LK" value="Назад" type="button" onclick="location.href='{{ url_for('main') }}'" />
+                 <input id="LK2" value="ЛК" type="button" onclick="location.href='{{ url_for('profile') }}'" />
+             </form>
+</form>
+<p>
+            <center><form id="top3">
+                 <input id="LK3" value="Фотографии с Марса" type="button" onclick="location.href='{{ url_for('nasaPhotos1') }}'" />
+                 <input id="LK4" value="Фотографии Земли" type="button" onclick="location.href='{{ url_for('nasaPhotos2') }}'" />
+</form></center>
+</p>
+<center><p id="Mars">
+<form id="photosMars" action="" method="post" novalidate>
+    <div id="label">Марсоход</div>
+    {{form.hidden_tag() }}
+    <div id="choise">{{form.rover}}</div>
+    <br>
+    <div id="center">
+        <div id="left">
+            <span class="name">Информация о марсоходе</span><br>
+            <div class="Text">
+            <span class="text">Дата запуска {{roverZ}}</span><br>
+            <span class="text">Дата посадки {{roverP}}</span><br>
+            <span class="text">Количество камер {{roverCameras}}</span><br>
+            <span class="text">Количество снимков {{roverPhoto}}</span><br>
+            </div>
+        </div>
+        <center><div id="cent">
+            <img id="MainPicture" src={{photo}} alt="Монитор">
+        </div></center>
+        <div id="right">
+            <span class="name">Информация о снимке</span><br>
+            <div class="Text">
+            <span class="text">Дата снимка {{data}}</span><br>
+            <span class="text">Название камеры {{camera}}</span><br>
+            </div>
+        </div>
+    </div>
+    <br>
+    <center><div class="button2">{{ form.submit() }}</div></center></form></p></center>
+{% endblock %}

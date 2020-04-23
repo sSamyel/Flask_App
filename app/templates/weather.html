@@ -1,0 +1,109 @@
+{% extends "index.html" %}
+
+{% block content1 %}
+<link rel="stylesheet" type="text/css" href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'>
+<link rel="stylesheet" type="text/css" href='{{ url_for("static", filename="css/style7.css") }}'>
+{% endblock %}
+{% block content2 %}
+<form id="top">
+             <form id="top2">
+                 <input id="LK" value="Назад" type="button" onclick="location.href='{{ url_for('main') }}'" />
+                 <input id="LK2" value="ЛК" type="button" onclick="location.href='{{ url_for('profile') }}'" />
+             </form>
+</form>
+<br>
+<br>
+<center><span id="title">Прогноз Погоды</span></center>
+    <center>
+        <form id="weather" action="" method="post" novalidate>
+        {{form.hidden_tag() }}
+        <span class="text">Введите интересующий вас город</span><br>
+        {{form.sity}} {{ form.submit() }}
+        </form>
+    </center>
+<br>
+<br>
+<center>
+    <span class="zag">Погодные условия </span><span class="par">{{conditions}}</span><br>
+    <span class="zag">Температура </span><span class="par">{{temp}} &#176C</span>  <span class="zag">Температура.мин </span><span class="par">{{temp_min}} &#176C</span>  <span class="zag">Температура.мак </span><span class="par">{{temp_max}} &#176C</span> <br>
+</center>
+<br>
+<br>
+<br>
+<center>
+    <span class="text">Прогноз погоды на ближайшие пять дней</span><br>
+</center>
+
+
+    <div id="prognoz">
+    <div class="f">
+        <center><span class="numDay">{{num[0]}}</span></center>
+        <div class="day">
+        {% for i in range(0, count) %}
+        {% if time[0]==data[0][i] %}
+        {{ data[1][i] }}<br>
+        {% endif %}
+        {% endfor %}
+    </div></div>
+        <div class="f">
+            <center><span class="numDay">{{num[1]}}</span></center>
+            <div class="day">
+        {% for i in range(0, count) %}
+        {% if time[1]==data[0][i] %}
+        {{ data[1][i] }}<br>
+        {% endif %}
+        {% endfor %}
+    </div></div>
+        <div class="f">
+            <center><span class="numDay">{{num[2]}}</span></center>
+            <div class="day">
+        {% for i in range(0, count) %}
+        {% if time[2]==data[0][i] %}
+        {{ data[1][i] }}<br>
+        {% endif %}
+        {% endfor %}
+    </div></div>
+        <div class="f">
+            <center><span class="numDay">{{num[3]}}</span></center>
+            <div class="day">
+        {% for i in range(0, count) %}
+        {% if time[3]==data[0][i] %}
+        {{ data[1][i] }}<br>
+        {% endif %}
+        {% endfor %}
+    </div></div>
+        <div class="f">
+            <center><span class="numDay">{{num[4]}}</span></center>
+            <div class="day">
+        {% for i in range(0, count) %}
+        {% if time[4]==data[0][i] %}
+        {{ data[1][i] }}<br>
+        {% endif %}
+        {% endfor %}
+    </div></div>
+        <div class="f">
+            <center><span class="numDay">{{num[5]}}</span></center>
+            <div class="day">
+        {% for i in range(0, count) %}
+        {% if time[5]==data[0][i] %}
+        {{ data[1][i] }}<br>
+        {% endif %}
+        {% endfor %}
+    </div></div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+{% endblock %}

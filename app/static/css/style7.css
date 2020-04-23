@@ -1,0 +1,290 @@
+#top, #top2{
+background-color: #555555;
+}
+
+input{
+    border: none;
+    color: #555555;
+    padding: 11px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+	background-color: #ffffff;
+	border-radius: 12px;
+	border: 2px solid #555555;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	margin-left: 10px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+}
+
+input {
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+}
+
+input:hover {
+    background-color: #ffffff; 
+    color: #555555;
+}
+
+input:focus{
+outline: none;
+}
+
+#LK, #LK2{
+    border: none;
+    color: white;
+    padding: 11px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+	background-color: #555555;
+	border-radius: 12px;
+	border: 2px solid #ffffff;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	margin-left: 10px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+}
+
+#LK, #LK2 {
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+}
+
+#LK:hover {
+    background-color: #ffffff; 
+    color: #555555;
+}
+
+#LK2:hover {
+    background-color: #ffffff; 
+    color: #555555;
+}
+
+input:focus{
+outline: none;
+}
+
+
+p{
+margin-top: 80px;
+text-align: center;
+}
+
+p span{
+	font-size: 40px;
+	color: #555555;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    left: 0;
+    position: absolute;
+    top: 450px;
+    width: 100%;
+}
+
+
+
+#LK2{
+     position:absolute;
+     left: 95%;
+
+}
+
+#Navigate1 {
+position:absolute;
+}
+
+#Navigate2 {
+position:absolute;
+margin-left: 110px;
+}
+
+form span{
+	font-size: 40px;
+	color: #ffffff;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	margin-left: 10px;
+}
+
+#name{
+margin-top: 100px;
+}
+
+#translate{
+background: #ffffff;
+}
+
+textarea {
+	border-radius: 12px;
+	border: 2px solid #555555;
+	font-size: 14px;
+	padding: 3px 3px;
+	width: 30%;
+}
+
+textarea:focus {
+outline: none;
+}
+
+#MainPicture {
+height: 35%;
+width: 30%;
+}
+
+#NasaPicture {
+height: 35%;
+width: 35%;
+border-radius: 12px;
+text-align: center;
+}
+
+
+
+
+select {
+
+border-radius: 12px;
+border: 2px solid #555555;
+font-size: 14px;
+}
+
+.button{
+}
+
+select:focus{
+outline: none;
+}
+
+#line {
+    border-left: 6px solid #ffffff;
+    height: 600px;
+}
+
+#LK3, #LK4 {
+    border: none;
+    color: #555555;
+    padding: 11px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+	background-color: #ffffff;
+	border-radius: 12px;
+	border: 2px solid #555555;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	margin-left: 10px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+}
+
+#LK3, #LK4  {
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+}
+
+#LK3:hover {
+    background-color: #555555; 
+    color: #ffffff;
+}
+
+#LK4:hover{
+    background-color: #555555; 
+    color: #ffffff;
+}
+
+#Mars{
+margin-top: -50px;
+}
+
+#label {
+font-size: 20px;
+font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+color: #555555;
+}
+
+.button2{
+margin-right: 10px;
+}
+
+img {
+border-radius: 12px;
+}
+
+#title {
+font-size: 40px;
+font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+color: #555555;
+}
+
+#data {
+font-size: 20px;
+font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+color: #555555;
+}
+
+#center {
+margin-top: -50px;
+}
+
+
+
+.text {
+color: #555555;
+font-size: 25px;
+}
+
+#weather {
+text-align: center;
+}
+
+.par {
+font-weight: bold;
+color: #555555;
+font-size: 25px;
+}
+
+.zag {
+color: #555555;
+font-size: 20px;
+margin-left: 5px;
+}
+
+#prognoz {
+margin-top: 50px;	
+text-align:center;
+width: 100%;
+}
+
+.f {
+display:inline-block;
+vertical-align: middle;
+}
+
+.day {
+width: 295px;
+height: 230px;
+margin:3pt;
+border-radius: 12px;
+padding: 7px 7px;
+background-color: #bbdcfa;
+opacity: 0.5;
+filter: alpha(opacity=50);
+text-align: justify;
+}
+
+.numDay {
+text-align: center;
+font-size: 18px;
+font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+color: #555555;
+font-weight: bold;
+}
+
+.alert {
+width: 300px;
+margin-left: 5px;
+}
+

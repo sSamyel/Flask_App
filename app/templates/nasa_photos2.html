@@ -1,0 +1,27 @@
+{% extends "index.html" %}
+
+{% block content1 %}
+<link rel="stylesheet" type="text/css" href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'>
+<link rel="stylesheet" type="text/css" href='{{ url_for("static", filename="css/style6.css") }}'>
+{% endblock %}
+{% block content2 %}
+<form id="top">
+             <form id="top2">
+                 <input id="LK" value="Назад" type="button" onclick="location.href='{{ url_for('main') }}'" />
+                 <input id="LK2" value="ЛК" type="button" onclick="location.href='{{ url_for('profile') }}'" />
+             </form>
+</form>
+<p>
+            <center><form id="top3">
+                 <input id="LK3" value="Фотографии с Марса" type="button" onclick="location.href='{{ url_for('nasaPhotos1') }}'" />
+                 <input id="LK4" value="Фотографии Земли" type="button" onclick="location.href='{{ url_for('nasaPhotos2') }}'" />
+</form></center>
+</p>
+<p id="center">
+<center><div id="title">Последний снимок Земли со спутника</div></center>
+<br>
+<center><div id="data">Снимок сделан {{dataYY}} {{dataMM}} {{dataDD}} в {{dataTime}}</div></center>
+<br>
+<center><img id="MainPicture" src={{photo}} alt="Земля"></center>
+</p>
+{% endblock %}

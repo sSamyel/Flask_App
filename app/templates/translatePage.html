@@ -1,0 +1,34 @@
+{% extends "index.html" %}
+
+{% block content1 %}
+<link rel="stylesheet" type="text/css" href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'>
+<link rel="stylesheet" type="text/css" href='{{ url_for("static", filename="css/style4.css") }}'>
+{% endblock %}
+{% block content2 %}
+<form id="top">
+             <form id="top2">
+                 <input id="LK" value="Назад" type="button" onclick="location.href='{{ url_for('main') }}'" />
+                 <input id="LK2" value="ЛК" type="button" onclick="location.href='{{ url_for('profile') }}'" />
+             </form>
+</form>
+<p><img id="MainPicture" src='{{ url_for("static", filename="Computer.png") }}' alt="Монитор">
+     <span id="Name">Переводчик</span>
+    <span id="private">{{commentary}}</span>
+    <br>
+    <br>
+    <form id="translate" action="" method="post" novalidate>
+        {{form.hidden_tag() }}
+        {% for error in form.text.errors %}
+	<center><div class="alert alert-danger" role="alert" align="center">
+	Слишком большое количество символов!
+	</div></center>
+	{% endfor %}
+		<center><div class="input">
+	{{form.text(cols=30, rows=6)}}<br>
+        </div></center>
+    <br>
+    <div id="choise">{{form.lang}}</div>
+    <center><div class="button">{{ form.submit() }}</div></center>
+</form>
+</p>
+{% endblock %}
