@@ -204,6 +204,8 @@ def Weather():
     global error
     mounth = ['января', 'февраля', 'марта', 'апреля', 'майя', 'июня',
               'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря']
+    condition= {'ясно':'1.png', 'пасмурно':'2.png', 'облачно':'3.png', 'небольшая облачность':'4.png', 'облачно с прояснениями':'5.png', 'небольшой дождь':'6.png',
+                'дождь':'7.png', 'сильный дождь':'8.png', 'сильный дождь,гроза':'9.png', 'дождь со снегом':'10.png', 'небольшой снег':'11.png', 'снег':'12.png', 'снегопад':'13.png'}
     form = WeatherForm()
     if form.validate_on_submit():
         city = form.sity.data
@@ -225,7 +227,7 @@ def Weather():
                         t[1] = t[1][1]
                     str = t[2] + ' ' + mounth[int(t[1])-1]
                     num.append(str)
-            return render_template('weather.html', conditions=date_arr[0], temp=date_arr[1], temp_min=date_arr[2], temp_max=date_arr[3], data=data, time=time, num=num,  count=count, form=form)
+            return render_template('weather.html', conditions=date_arr[0], temp=date_arr[1], temp_min=date_arr[2], temp_max=date_arr[3], data=data, time=time, num=num,  count=count, img=condition.get(date_arr[0]), form=form)
         else:
             error = 'empty'
             return render_template('weatherTitle.html', error=error, form=form)
