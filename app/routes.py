@@ -68,7 +68,7 @@ def registration():
         login = form.login.data
         fullname = form.fullname.data
         email = form.email.data
-        picture = "avatar.png"
+        picture = "Leptoop.png"
         commentary = "Добро пожаловать!"
         user = User(username=username, password_hash=password, login=login, fullname=fullname, email=email, picture=picture, commentary=commentary)
         username = ""
@@ -76,7 +76,6 @@ def registration():
         tmail = ""
         db.session.add(user)
         db.session.commit()
-        NUM_USER += 1
         return redirect('/mainPage')
     else:
         logout_user()
